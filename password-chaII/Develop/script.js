@@ -1,5 +1,3 @@
-
-// Assignment code here
 // Create an array of the four choices (Lower-case, Upper-case, Numbers, Symbols)
 
 
@@ -8,27 +6,6 @@ var upperChars = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
 var lowerChars = "abcdefghijklmnopqrstuvwxyz";
 var symbolChars = "!@#$%^&*()_+=-{}|[]:'?><,.";
 var allChars = numberChars + upperChars + lowerChars + symbolChars;
-// var randPasswordArray = Array(passwordLength);
-
-// randPasswordArray [0] = numberChars;
-// randPasswordArray [1] = upperChars;
-// randPasswordArray [2] = lowerChars;
-// randPasswordArray [3] = symbolChars;
-
-// randPasswordArray = randPasswordArray.fill(allChars, 4);
-// return shuffleArray(randPasswordArray.map(function(x); 
-
-// { return x[Math.floor(Math.random()* x.length)] })).join('')
-
-// }
-
-// function shuffleArray(array {
-//   for (var i = array.length - 1; i--)
-// })
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -53,28 +30,28 @@ function generatePassword() {
     var isNumeric = confirm("Do you want numbers in your password?")
     var isSpecialCharacters = confirm("Do you want special characters on your password?")
 
-    for (let i = 0; password.length   < passwordSize; i++) {
-      if (isLowercase  && password.length   < passwordSize) {
+    for (let i = 0; password.length < passwordSize; i++) {
+      if (isLowercase && password.length < passwordSize) {
         var index = Math.floor(Math.random() * lowerChars.length)
         password = password + lowerChars.charAt(index) //"" +"f" result=> "f"
       }
-  
-      if (isUppercase && password.length   < passwordSize) {
+
+      if (isUppercase && password.length < passwordSize) {
         var index = Math.floor(Math.random() * upperChars.length)
         password = password + upperChars.charAt(index) //"" +"f" result=> "f"
       }
-      if (isNumeric && password.length   < passwordSize) {
+      if (isNumeric && password.length < passwordSize) {
         var index = Math.floor(Math.random() * numberChars.length)
         password = password + numberChars.charAt(index) //"" +"f" result=> "f"
       }
-      if (isSpecialCharacters && password.length   < passwordSize){
-        var index = Math.floor(Math.random()*symbolChars.length)
+      if (isSpecialCharacters && password.length < passwordSize) {
+        var index = Math.floor(Math.random() * symbolChars.length)
         password = password + symbolChars.charAt(index) //"" +"f" result=> "f"
-     }
-      
+      }
+
     }
 
- 
+
 
     return password
 
